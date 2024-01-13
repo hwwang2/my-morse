@@ -44,12 +44,16 @@ $("#play").click(function() {
             break;
         case splits.long:
             gainNode.gain.setValueAtTime(1, t);
-            t += 3 * dot;
+            t += 2 * dot;
             gainNode.gain.setValueAtTime(0, t);
             t += dot;
             break;
         case splits.space:
-            t += 7 * dot;
+            t += 4 * dot;
+            break;
+        
+        case ' ':
+            t += 4 * dot;
             break;
         }
     });
